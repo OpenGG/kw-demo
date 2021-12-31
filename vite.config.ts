@@ -2,13 +2,17 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
+const isCodeSandbox = process.cwd() === '/sandbox'
+
+const server = isCodeSandbox && {
+  hmr: {
+    port: 443
+  }
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  server: {
-    hmr: {
-      port: 443
-    }
-  },
+  server,
   plugins: [react()],
   resolve: {
     alias: {

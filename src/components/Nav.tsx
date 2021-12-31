@@ -1,18 +1,31 @@
-import { nav } from './Nav.module.css';
+import { nav, navTab, navTabActive } from './Nav.module.css';
+import classnames from 'classnames'
 
 type IAnchor = {
   id: string;
   text: string;
 };
 
-const Nav = ({ anchors }: { anchors: IAnchor[] }) => (
+const Nav = ({
+  active,
+  anchors,
+  onClick,
+}: {
+  active: string,
+  anchors: IAnchor[],
+  onClick: (active: string) => void
+}) => (
   <div className={nav}>
     {anchors.map((anchor) => (
-      <a key={anchor.id} href={anchor.id}>
+      <div
+        className={classnames(navTab, active === anchor.id && navTabActive)}
+        key={anchor.id}
+        onClick={() => onClick(anchor.id)}
+      >
         {anchor.text}
-      </a>
+      </div>
     ))}
-  </div>
+  </div >
 );
 
 export default Nav;
