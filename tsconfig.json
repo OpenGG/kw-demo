@@ -21,10 +21,10 @@
     "jsx": "react-jsx",
     "paths": {
       "@ks/kw/*": [
-        "k/*"
+        "./k/*"
       ],
       "@ks/kwcolor/*": [
-        "k/*"
+        "./k/*"
       ]
     }
   },

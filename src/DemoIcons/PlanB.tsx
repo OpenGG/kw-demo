@@ -5,7 +5,7 @@ import common_base_like_24 from '@ks/kw/icon/output/common/base/common_base_like
 
 // 第二步（可选）：引入颜色
 import '@ks/kwcolor/color/output/all/index.css';
-import { color_base_black_1 } from '@ks/kwcolor/color/output/all/index.v2.js';
+import * as colors from '@ks/kwcolor/color/output/all/index.v2.js';
 
 import { hello, hello1 } from './PlanB.module.less';
 
@@ -18,7 +18,7 @@ const PlanA = () => (
     <Icon
       config={common_base_like_24}
       className={hello1}
-      style={{ color: color_base_black_1 }}
+      style={{ color: colors.color_base_black_1 }}
     />
   </div>
 );
