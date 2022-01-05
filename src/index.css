@@ -6,3 +6,8 @@ h2 {
   font-size: 18px;
   line-height: 1.2;
 }
+
+.svgfont {
+  width: 60px;
+  height: 60px;
+}

@@ -15,15 +15,17 @@ const PlanCDom = () => {
       icon-common_base_like_24
       icon-common_base_like_24-dual
     "
-  ></span>
-  <span
+    style="font-size: 40px;"
+  ></span>${
+/* 不推荐做法：在 class 规则 或 style 属性中自定义颜色，会覆盖掉图标本身颜色 */''
+    }<span
     aria-hidden="true"
     class="${hello1}
       iconfont-all
       icon-common_base_like_24
       icon-common_base_like_24-dual
     "
-    style="color: var(--color_base_black_1)"
+    style="font-size: 30px;color: var(--color_base_black_1)"
   ></span>
   `;
 };
