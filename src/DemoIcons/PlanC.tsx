@@ -2,7 +2,7 @@ import React from 'react';
 // 第一步：引入图标
 import '@ks/kw/icon/output/all/iconfont.css';
 import IconFont from '@ks/kw/icon/output/all/iconfont.js';
-import IconFontLight from '@ks/kw/icon/output/all/IconFontLight.js';
+import IconFontLight from '@ks/kw/icon/output/all/iconfontLight.js';
 
 // 第二步（可选）：引入颜色
 import '@ks/kwcolor/color/output/all/index.css';
