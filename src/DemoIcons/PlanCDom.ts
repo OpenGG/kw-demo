@@ -29,7 +29,6 @@ const PlanCDom = () => {
   class="${hello1}
     iconfont-all
     icon-common_base_like_24
-    icon-common_base_like_24
   "
 ></span>
   `;
