@@ -18,13 +18,20 @@ const PlanCDom = () => {
     style="font-size: 40px;"
   ></span><span
     aria-hidden="true"
-    class="${hello1}
+    class="${hello}
       iconfont-all
       icon-common_base_like_24
       icon-common_base_like_24-dual
     "
     style="font-size: 30px;color: var(--color_base_black_1)"
-  ></span>
+  ></span><span
+  aria-hidden="true"
+  class="${hello1}
+    iconfont-all
+    icon-common_base_like_24
+    icon-common_base_like_24
+  "
+></span>
   `;
 };
 
