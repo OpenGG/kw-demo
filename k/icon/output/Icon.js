@@ -45,27 +45,37 @@ const injectSymbol = (id, config) => {
         ruleMedia.insertRule(`.${id}-dual{color:${colorDark}}`, ruleMediaInsertAt);
     }
 };
-const IconSVG = ({ config, darkMode = true, className, size, style, ...props }) => {
+const iconStyle = (size, color, style) => {
+    if (!size && !color) {
+        return style;
+    }
+    const res = {};
+    if (size) {
+        const s = typeof size === 'number' ? `${size}px` : size;
+        res.width = s;
+        res.height = s;
+    }
+    if (color) {
+        res.color = color;
+    }
+    return Object.assign(res, style);
+};
+const IconSVG = ({ config, darkMode = true, className, size, color, style, ...props }) => {
     const configSVG = config;
     const [, k, , , colorDark] = configSVG;
     const id = `svg-${k}`;
     useEffect(() => {
         injectSymbol(id, configSVG);
     }, [id, configSVG]);
-    const sizeStyle = size ? {
-        width: `${size}px`,
-        height: `${size}px`,
-        ...style,
-    } : style;
     return React.createElement('svg', {
         xmlns,
         className: classnames('svgfont', id, (darkMode && colorDark) ? `${id}-dual` : '', className),
         'aria-hidden': 'true',
-        style: sizeStyle,
+        style: iconStyle(size, color, style),
         ...props
     }, React.createElement('use', { xlinkHref: `#${id}` }));
 };
-const IconPNG = ({ config, darkMode = true, className, ...props }) => {
+const IconPNG = ({ config, darkMode = true, className, size, color, style, ...props }) => {
     const [, light, dark] = config;
     const imgProps = props;
     return React.createElement('picture', null, (darkMode && dark) ? React.createElement('source', {
@@ -75,6 +85,7 @@ const IconPNG = ({ config, darkMode = true, className, ...props }) => {
         className: classnames('svgfont', className),
         'aria-hidden': 'true',
         src: light || dark,
+        style: iconStyle(size, color, style),
         ...imgProps
     }));
 };
