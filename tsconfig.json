@@ -17,7 +17,7 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    // "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
       "@ks/kw/*": [
@@ -26,7 +26,8 @@
       "@ks/kwcolor/*": [
         "./k/*"
       ]
-    }
+    },
+    "outDir": "./dist-ts"
   },
   "include": [
     "./typings",
