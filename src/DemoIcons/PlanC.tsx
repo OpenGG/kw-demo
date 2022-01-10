@@ -32,6 +32,12 @@ const PlanC = () => (
       className={hello}
     />
 
+    <IconFont
+      icon="common_base_like_24_png"
+      size={40}
+      className={hello}
+    />
+
     <IconFontLight
       icon="common_base_like_24"
       className={hello}
@@ -40,7 +46,19 @@ const PlanC = () => (
     />
 
     <IconFontLight
+      icon="common_base_like_24_png"
+      className={hello}
+      size={30}
+      color={colors.color_base_black_1}
+    />
+
+    <IconFontLight
       icon="common_base_like_24"
+      className={hello1}
+    />
+
+    <IconFontLight
+      icon="common_base_like_24_png"
       className={hello1}
     />
   </div>

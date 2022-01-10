@@ -17,6 +17,14 @@ const PlanCDom = () => {
     "
     style="font-size: 40px;"
   ></span><span
+  aria-hidden="true"
+  class="${hello}
+    iconfont-all
+    icon-common_base_like_24_png
+    icon-common_base_like_24_png-dual
+  "
+  style="font-size: 40px;"
+></span><span
     aria-hidden="true"
     class="${hello}
       iconfont-all
@@ -26,10 +34,24 @@ const PlanCDom = () => {
     style="font-size: 30px;color: var(--color_base_black_1)"
   ></span><span
   aria-hidden="true"
+  class="${hello}
+    iconfont-all
+    icon-common_base_like_24_png
+    icon-common_base_like_24_png-dual
+  "
+  style="font-size: 30px;color: var(--color_base_black_1)"
+></span><span
+  aria-hidden="true"
   class="${hello1}
     iconfont-all
     icon-common_base_like_24
   "
+></span><span
+aria-hidden="true"
+class="${hello1}
+  iconfont-all
+  icon-common_base_like_24_png
+"
 ></span>
   `;
 };

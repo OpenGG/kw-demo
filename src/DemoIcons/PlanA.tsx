@@ -32,6 +32,12 @@ const PlanA = () => (
       className={hello}
     />
 
+    <Icon
+      config={icons.common_base_like_24_png}
+      size={40}
+      className={hello}
+    />
+
     <IconLight
       config={icons.common_base_like_24}
       className={hello}
@@ -40,7 +46,19 @@ const PlanA = () => (
     />
 
     <IconLight
+      config={icons.common_base_like_24_png}
+      className={hello}
+      size={30}
+      color={colors.color_base_black_1}
+    />
+
+    <IconLight
       config={icons.common_base_like_24}
+      className={hello1}
+    />
+
+    <IconLight
+      config={icons.common_base_like_24_png}
       className={hello1}
     />
   </div>
