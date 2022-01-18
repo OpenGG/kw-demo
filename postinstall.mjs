@@ -1,5 +1,6 @@
 import {
     spawn,
+    spawnSync,
 } from 'child_process'
 
 import {
@@ -20,8 +21,8 @@ const hasEslint = async () => {
     }
 }
 
-const isStackblitz = async () => {
-    const proc = await spawn('npm', ['--help'])
+const isStackblitz = () => {
+    const proc = spawnSync('npm', ['--help'])
 
     const stdout = `${proc.stdout}`
 
@@ -49,7 +50,7 @@ const installDeps = async () => {
 }
 
 const main = async () => {
-    if (await isStackblitz()) {
+    if (isStackblitz()) {
         return
     }
 
