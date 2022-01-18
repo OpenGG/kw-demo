@@ -6,12 +6,12 @@
     "start": "vite",
     "dev": "concurrently vite 'npm run test'",
     "test": "npm run build:test && npm run test:tree-shaking",
-    "test:tree-shaking": "node test/tree-shaking.mjs /tmp/vite-test",
+    "test:tree-shaking": "node scripts/test-tree-shaking.mjs /tmp/vite-test",
     "build": "tsc --noEmit && vite build",
     "build:test": "tsc --noEmit && vite build --emptyOutDir --outDir /tmp/vite-test",
     "serve": "vite preview",
-    "lint": "eslint src --ext .ts,.tsx",
-    "postinstall": "node postinstall.mjs"
+    "lint": "eslint src scripts --ext .mjs,.js,.ts,.tsx",
+    "postinstall": "node scripts/postinstall.mjs"
   },
   "dependencies": {
     "classnames": "^2.3.1",
