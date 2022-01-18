@@ -5,27 +5,30 @@
   "scripts": {
     "start": "vite",
     "dev": "concurrently vite 'npm run test'",
-    "test": "npm run lint && npm run build:test && npm run test:tree-shaking",
+    "test": "npm run build:test && npm run test:tree-shaking",
     "test:tree-shaking": "node test/tree-shaking.mjs /tmp/vite-test",
     "build": "tsc --noEmit && vite build",
     "build:test": "tsc --noEmit && vite build --emptyOutDir --outDir /tmp/vite-test",
     "serve": "vite preview",
-    "lint": "eslint src --ext .ts,.tsx"
+    "lint": "eslint src --ext .ts,.tsx",
+    "postinstall": "node postinstall.mjs"
   },
   "dependencies": {
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "devDependencies": {
+  "devOnlyDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.5.0"
+  },
+  "devDependencies": {
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "@vitejs/plugin-react": "^1.1.3",
     "ansi-colors-es6": "^5.0.0",
     "concurrently": "^7.0.0",
-    "eslint": "^8.5.0",
     "fast-glob": "^3.2.7",
     "less": "^4.1.2",
     "sass": "^1.45.1",
